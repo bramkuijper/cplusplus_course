@@ -1,0 +1,48 @@
+\documentclass{beamer}
+\begin{document}
+\begin{frame}{Two column layout with dynamic images}
+\begin{columns}
+        \begin{column}{0.5\textwidth}
+          \begin{enumerate}
+              \item<1-> My first item: 
+              \item<2-> my second item
+              \item<3-> my third item
+              \item<4-> my third item
+              \item<5-> my third item
+          \end{enumerate}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+        \only<1>{\begin{figure}
+                   \includegraphics[height=0.45\textwidth]{example-image-a}
+              \end{figure}}%
+        \only<2>{\begin{figure}
+                   \includegraphics[height=0.3\textwidth]{example-image-b}
+              \end{figure}}
+        \end{column}
+\end{columns}
+\end{frame}
+\begin{frame}{series of images}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \begin{enumerate}
+                      \item<1-> My first item: 
+                      \item<2-> my second item
+                      \item<3-> my third item
+                      \item<4-> my fourth item
+                      \item<5-> my fifth item
+            \end{enumerate}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \only<1>{\begin{figure}
+                \includegraphics[height=0.45\textwidth]{example-image-a}
+            \end{figure}}%
+            \only<2>{
+                \begin{figure}
+                    \includegraphics[height=0.10\textwidth]{example-image-b}
+                \end{figure}}
+        \end{column}
+    \end{columns}
+\end{frame}
+\end{document}
+%\hspace{-0.34em}\only<3>{\includegraphics[scale=0.10]{example-image-b}}
+%\hspace{-0.17em}\only<4>{\includegraphics[scale=0.20]{example-image-c}}
